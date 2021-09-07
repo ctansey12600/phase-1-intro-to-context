@@ -52,63 +52,63 @@ function hoursWorkedOnDate(object, time){
     let totalIn
     let totalOut
 
-    if( hTimeIn === `${time}`){
-        let num = timeIn[0].hour 
-        let string = num.toString()
-        let arrayIn = [`${string}`]
-        let value = `${arrayIn[0]}`
-        //for statement gets ['900'] to array of [ "9", "0"
-        let arrayValue = []
-        for (let i = 0; i < value.length; i++) {
-            arrayValue.push(value.charAt(i))
-        }
-        let arraySingleValue = []
-        arrayValue.map((res) => {
-            if (res > 0){
-            arraySingleValue.push(parseInt(res))}
-        })
-        totalIn = parseInt(arraySingleValue.join(""))
-    } 
+    // if( hTimeIn === `${time}`){
+    //     let num = timeIn[0].hour 
+    //     let string = num.toString()
+    //     let arrayIn = [`${string}`]
+    //     let value = `${arrayIn[0]}`
+    //     //for statement gets ['900'] to array of [ "9", "0"
+    //     let arrayValue = []
+    //     for (let i = 0; i < value.length; i++) {
+    //         arrayValue.push(value.charAt(i))
+    //     }
+    //     let arraySingleValue = []
+    //     arrayValue.map((res) => {
+    //         if (res > 0){
+    //         arraySingleValue.push(parseInt(res))}
+    //     })
+    //     totalIn = parseInt(arraySingleValue.join(""))
+    // } 
 
-    if( hTimeOut === `${time}`){
-        let num = timeOut[0].hour 
-        let string = num.toString()
-        let arrayOut = [`${string}`]
-        let value = `${arrayOut[0]}`
-        //for statement gets ['900'] to array of [ "9", "0"
-        let arrayValue = []
-        for (let i = 0; i < value.length; i++) {
-            arrayValue.push(value.charAt(i))
-        }
-        if (arrayValue.length < 4){
-         let arraySingleValue = []
-         arrayValue.map((res) => {
-            if (res > 0){
-            arraySingleValue.push(parseInt(res))}
-        })}
-        else if (arrayValue.length = 4){
+    // if( hTimeOut === `${time}`){
+    //     let num = timeOut[0].hour 
+    //     let string = num.toString()
+    //     let arrayOut = [`${string}`]
+    //     let value = `${arrayOut[0]}`
+    //     //for statement gets ['900'] to array of [ "9", "0"
+    //     let arrayValue = []
+    //     for (let i = 0; i < value.length; i++) {
+    //         arrayValue.push(value.charAt(i))
+    //     }
+    //     if (arrayValue.length < 4){
+    //      let arraySingleValue = []
+    //      arrayValue.map((res) => {
+    //         if (res > 0){
+    //         arraySingleValue.push(parseInt(res))}
+    //     })}
+    //     else if (arrayValue.length = 4){
             
-        }
-        totalOut = parseInt(arraySingleValue.join(""))
-    } 
+    //     }
+    //     totalOut = parseInt(arraySingleValue.join(""))
+    // } 
     
-    if(totalIn < totalOut){
-        return totalOut - totalIn
-    }else if(totalOut < totalIn){
-        return totalIn - totalOut 
-    }
+    // if(totalIn < totalOut){
+    //     return totalOut - totalIn
+    // }else if(totalOut < totalIn){
+    //     return totalIn - totalOut 
+    // }
 }
 
-function wagesEarnedOnDate(object, time){
-    let hoursWorked = hoursWorkedOnDate(object, time)
-    let payRate = object.payPerHour
-    return payRate * hoursWorked
-}
+// function wagesEarnedOnDate(object, time){
+//     let hoursWorked = hoursWorkedOnDate(object, time)
+//     let payRate = object.payPerHour
+//     return payRate * hoursWorked
+// }
 
 
 
-function allWagesFor(object){
-    let time = object.timeInEvents[0].date
-    console.log(object.timeInEvents[0].)
-    console.log(wagesEarnedOnDate(object, time))
-}
+// function allWagesFor(object){
+//     let time = object.timeInEvents[0].date
+//     console.log(object.timeInEvents[0].)
+//     console.log(wagesEarnedOnDate(object, time))
+// }
