@@ -80,11 +80,15 @@ function hoursWorkedOnDate(object, time){
         for (let i = 0; i < value.length; i++) {
             arrayValue.push(value.charAt(i))
         }
-        let arraySingleValue = []
-        arrayValue.map((res) => {
+        if (arrayValue.length < 4){
+         let arraySingleValue = []
+         arrayValue.map((res) => {
             if (res > 0){
             arraySingleValue.push(parseInt(res))}
-        })
+        })}
+        else if (arrayValue.length = 4){
+            
+        }
         totalOut = parseInt(arraySingleValue.join(""))
     } 
     
@@ -105,6 +109,6 @@ function wagesEarnedOnDate(object, time){
 
 function allWagesFor(object){
     let time = object.timeInEvents[0].date
-    console.log(object.timeInEvents[0].time)
+    console.log(object.timeInEvents[0].)
     console.log(wagesEarnedOnDate(object, time))
 }
